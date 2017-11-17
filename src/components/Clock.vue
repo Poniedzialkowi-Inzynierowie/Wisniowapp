@@ -14,7 +14,6 @@
 
 export default {
   data () {
-
     return {
       hours: '',
       minutes: '',
@@ -27,14 +26,13 @@ export default {
   },
   methods: {
 
-
     getHourTime: function (h) {
-    return h >= 12 ? 'PM' : 'AM'
-},
+      return h >= 12 ? 'PM' : 'AM'
+    },
 
-    getZeroPad:    function (n) {
-    return (parseInt(n, 10) >= 10 ? '' : '0') + n
-},
+    getZeroPad: function (n) {
+      return (parseInt(n, 10) >= 10 ? '' : '0') + n
+    },
 
     updateDateTime () {
       let now = new Date()
@@ -44,7 +42,6 @@ export default {
       this.hourtime = this.getHourTime(this.hours)
       this.hours = this.hours % 12 || 12
     }
-
 
   }
 }
